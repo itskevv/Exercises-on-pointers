@@ -10,33 +10,37 @@ struct student
 int main()
 {
 	int no_stu,i;
-	student k;
+	student k[100];
 	cout<<"Enter how many number of students: ";
 	cin>>no_stu;
 	cout<<"Now enter your students info. "<<endl;
 	for(i=1;i<=no_stu;i++)
 	{
-		cout<<"Name: ";
-		cin>>k.name;
+		cout<<endl<<"Name: ";
+		cin>>k[i].name;
 		cout<<"Surname: ";
-		cin>>k.s_name;
+		cin>>k[i].s_name;
 		cout<<"Marks in Visual Basic: ";
-		cin>>k.vb;
+		cin>>k[i].vb;
 		cout<<"Marks in C++ programming: ";
-		cin>>k.cpp;
+		cin>>k[i].cpp;
 		cout<<"Marks in Web design: ";
-		cin>>k.wd;
+		cin>>k[i].wd;
 		cout<<"Marks in Math: ";
-		cin>>k.math;
+		cin>>k[i].math;
 		cout<<"Marks in Physics: ";
-		cin>>k.phy;
-		k.sum=k.vb+k.cpp+k.wd+k.math+k.phy;
-		k.mean=k.sum/5;
-		k.per=k.sum*100/500;
+		cin>>k[i].phy;
+		k[i].sum=k[i].vb+k[i].cpp+k[i].wd+k[i].math+k[i].phy;
+		k[i].mean=k[i].sum/5;
+		k[i].per=k[i].sum*100/500;
 		cout<<endl<<endl;
-		
-		cout<<"Student: "<<k.name<<" "<<k.s_name;
-		cout<<endl<<"Their mean is: "<<k.mean<<" and their percentage is: "<<k.per<<endl;
 	}
+	cout<<"Now for the students marks: "<<endl;
+	for(i=1;i<=no_stu;i++)
+	{
+		cout<<"Student: "<<k[i].name<<" "<<k[i].s_name<<endl<<endl;
+		cout<<endl<<"Their mean is: "<<k[i].mean<<" and their percentage is: "<<k[i].per<<endl;
+	}
+	
 	cout<<endl<<endl<<"Thank you";
 }
