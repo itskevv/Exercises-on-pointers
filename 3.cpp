@@ -3,7 +3,6 @@ using namespace std;
 void addition(int *a,int *b,int *c){
 	int sum;
 	sum=*a+*b+*c;
-	cout<<"the sum is: "<<sum<<endl;
 }
 void moyenne(int aa,int bb,int cc){
 	int avg;
