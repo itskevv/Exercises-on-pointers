@@ -2,21 +2,12 @@
 using namespace std;
 int main()
 {
-	int math,phy,comp;
-	int *mth=&math,*ph=&phy,*cs=&comp;
-	int sum,mean;
-	cout<<"Welcome your about to enter your marks. "<<endl;
-	cout<<"Math in percentage: ";
-	cin>>*mth;
-	cout<<"Physics in percentage: ";
-	cin>>*ph;
-	cout<<"Comp in percentage: ";
-	cin>>*cs;
+	int marks,*mrks;
+	cout<<"Enter your marks: ;
+	cin>>marks;
+	mrks=&marks;
 	
-	sum=*mth+*ph+*cs;
-	mean=(sum*100)/300;
-	
-	switch(mean)
+	switch(*mrks)
 	{
 		case 80 ... 100 :
 			{
