@@ -8,7 +8,7 @@ int main()
 	ptr=&prod;
 	for(mul=1;mul<=12;mul++)
 	{
-		*ptr=mul*num;
+		prod=mul*num;
 		cout<<mul<<" * "<<num<<" = "<<*ptr<<endl;
 	}	
 	cout<<endl;
